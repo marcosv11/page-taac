@@ -24,3 +24,42 @@
 .accordion {
   margin-bottom: 150px;
 }
+
+
+.sucess textarea{
+  border: 3px solid green;
+}
+
+.error textarea{
+  border: 3px solid red;
+}
+
+.form-floating.error small {
+  visibility: visible;
+  color: red;
+}
+
+.form-floating.sucess small{
+  visibility: visible;
+}
+
+.form-floating small {
+  visibility:hidden;
+}
+
+
+textarea {
+  width: 60%;
+  height: 600px;
+}
+
+input {
+  position: absolute;
+
+}
+
+small {
+  position: absolute;
+  margin-left: 75px;
+  margin-top: 5px;
+}
