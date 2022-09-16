@@ -1,6 +1,7 @@
 const desc = document.querySelector("#descricao");
 const form = document.querySelector("#form");
 
+
 form.addEventListener("submit", (e) => {
   e.preventDefault();
   checkInputs();
@@ -9,7 +10,7 @@ form.addEventListener("submit", (e) => {
 function checkInputs() {
   let resultados = validador();
   if (resultados == true) {
-    setSuccessFor(desc, "Deu certo a validação");
+    setSuccessFor(desc, "Validação Correta ✅");
   } else {
     errorvalidation(desc, resultados[1]);
   }
@@ -54,33 +55,33 @@ function validador() {
               } else {
                 return [
                   false,
-                  "Caminho reports -> arn:aws:codebuild... -> files - Não contem arquivos especificados",
+                  "❌ Caminho reports -> arn:aws:codebuild... -> files - Não contem arquivos especificados ",
                 ];
               }
               return true;
             } else {
               return [
                 false,
-                "Caminho reports -> arn:aws:codebuild... -> files - Não contem arquivos especificados",
+                "❌ Caminho reports -> arn:aws:codebuild... -> files - Não contem arquivos especificados",
               ];
             }
           } else {
             return [
               false,
-              "Caminho reports -> arn:aws:codebuild... não encontrado",
+              "❌ Caminho reports -> arn:aws:codebuild... não encontrado",
             ];
           }
         } else {
-          return [false, "Caminho reports não encontrado"];
+          return [false, "❌ Caminho reports não encontrado"];
         }
       } else {
-        return [false, "Caminho build não encontrado"];
+        return [false, "❌ Caminho build não encontrado"];
       }
     } else {
-      return [false, "Caminho Build não encontrado"];
+      return [false, "❌ Caminho Build não encontrado"];
     }
   } else {
-    return [false, "Caminho phases não encontrado"];
+    return [false, "❌ Caminho phases não encontrado"];
   }
 }
 
@@ -129,12 +130,12 @@ function validador1() {
           if (regexValue1(/\echo\s+'Testes executados manualmente'/g)) {
             return [
               false,
-              "Você declarou que os testes foram executados manualmente. Para seguir com esta implantação, é necessário informar o ID do Plano de Execução do Silk no agendamento da GMUD para validação do Motor de Confibilidade",
+              "❌Você declarou que os testes foram executados manualmente. Para seguir com esta implantação, é necessário informar o ID do Plano de Execução do Silk no agendamento da GMUD para validação do Motor de Confibilidade",
             ];
           }
           if (
             regexValue1(
-              /\echo\s+'Impossibilidade técnica para exercutar testes'/g
+              /\echo\s+'❌Impossibilidade técnica para exercutar testes'/g
             )
           ) {
             return [false, "TEXTO 2"];

@@ -1,4 +1,6 @@
-
+body{
+	font-family: arial;	
+}
 
 .m {
   background: #ccc;
@@ -21,17 +23,133 @@
   background: red;
 }
 
-.accordion {
-  margin-bottom: 150px;
+
+.form-floating.error small {
+  visibility: visible;
+  color: red;
+}
+
+.form-floating.sucess small{
+  visibility: visible;
+}
+
+.form-floating small {
+  visibility:hidden;
 }
 
 
+
+input {
+  position: absolute;
+
+}
+
+/* small {
+  position: absolute;
+  margin-left: 75px;
+  margin-top: 5px;
+  margin-right: 20%;
+}  */
+
+.wrapper{
+	width: 800px;
+	height: 100vh;
+	margin: 0 auto;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+}
+
+.cmd{
+	position: relative;
+	display: block;
+	height: 600px;
+	width: 100%;
+	border: 1px solid #000000;
+	border-radius: 4px;
+	overflow: hidden;
+  box-shadow: rgba(0, 0, 0, 1.119) 0px 10px 20px, rgba(0, 0, 0, 1.23) 0px 6px 6px;
+
+}
+
+/*
+ * 1. Set position
+ * 2. Set dimension
+ * 3. Style
+ */
+.title-bar{
+	/* 1 */
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	/* 2 */
+	width: 100%;
+	height: 40px;
+	/* 3 */
+	display: block;
+	color: black;
+	line-height: 40px;
+	font-weight: 600;
+	background-color: white;
+	text-align: center;
+}
+
+.tool-bar{
+	position: absolute;
+	top: 40px;
+	left: 0;
+	right: 0;
+	display: block;
+	width: 100%;
+	height: 40px;
+	line-height: 30px;
+	background-color: #242424;
+}
+
+.tool-bar ul{
+	list-style-type: none;
+	margin: 0px;
+	padding: 0px;
+}
+
+.tool-bar ul li{
+	display: inline-block;
+	margin: 0;
+	padding: 0;
+}
+
+.tool-bar ul li a{
+	padding: 0px 6px;
+	text-decoration: none;
+	color: #FFFFFF;
+}
+
+.tool-bar ul li a:hover{
+	text-decoration: underline;
+}
+
+textarea{
+	position: relative;
+	top: 70px;
+	padding: 12px;
+	resize: none;
+	width: 100%;
+	height: calc(100% - 70px);
+	background-color: black;
+	border: none;
+	color: #FFFFFF;
+	margin: 0px;
+	font-size: 1.1rem;
+  height: 600px;
+  font-family: arial;	
+}
+
 .sucess textarea{
-  border: 3px solid green;
 }
 
 .error textarea{
-  border: 3px solid red;
 }
 
 .form-floating.error small {
@@ -48,19 +166,23 @@
 }
 
 
-textarea {
-  width: 60%;
-  height: 600px;
-}
-
-input {
-  position: absolute;
-
-}
-
 small {
   position: absolute;
   margin-left: 75px;
   margin-top: 5px;
   margin-right: 20%;
+  color: white;
+}  
+
+.form-control {
+  padding: 0px;
 }
+
+.sucess {
+  border: 5px solid red;
+}
+
+.error {
+  border: 5px solid blue;
+}
+
